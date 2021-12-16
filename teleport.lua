@@ -115,14 +115,14 @@ Citizen.CreateThread(function()
 		for veh in platano:enumerate_vehicles() do				
 			if IsEntityDead(veh) then
 				i = i + 1
-				if platano:button(GetDisplayNameFromVehicleModel(GetEntityModel(veh)) .. " [~r~DESTROYED~w~]",25,i * 16,255,255,255) then
+				if platano:button(GetDisplayNameFromVehicleModel(GetEntityModel(veh)) .. " [~r~DESTRUIDO~w~]",25,i * 16,255,255,255) then
 					SetVehicleFixed(veh)
 					SetPedIntoVehicle(GetPlayerPed(-1),veh,-1)
 				end
 			else	
 				if GetPedInVehicleSeat(veh,-1) == 0 then
 					i = i + 1
-					if platano:button(GetDisplayNameFromVehicleModel(GetEntityModel(veh)) .. " [~g~NO DRIVER~w~]",25,i * 16,255,255,255) then
+					if platano:button(GetDisplayNameFromVehicleModel(GetEntityModel(veh)) .. " [~g~SEM MOTORISTA~w~]",25,i * 16,255,255,255) then
 						SetPedIntoVehicle(GetPlayerPed(-1),veh,-1)
 					end
 				end
